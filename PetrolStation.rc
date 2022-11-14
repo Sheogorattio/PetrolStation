@@ -1,0 +1,204 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian (Russia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOGEX 0, 0, 214, 199
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Головне меню"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,29,178,50,14
+    PUSHBUTTON      "Закрити",IDC_MMenuCancel,143,178,50,14
+    PUSHBUTTON      "Автозаправка",IDC_PetrolButton,75,51,50,14
+    PUSHBUTTON      "Міні-кафе",IDC_CafeButton,75,79,50,14
+    LTEXT           "Всього до сплати:",IDC_STATIC,25,149,62,8
+    EDITTEXT        IDC_TotalPrice,104,146,72,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 165, 177
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Автозаправка"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,156,50,14
+    PUSHBUTTON      "Закрити",IDCANCEL,108,156,50,14
+    COMBOBOX        IDC_PetrolTypeCombo,71,28,48,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Бензин",IDC_STATIC,15,30,25,8
+    EDITTEXT        IDC_PetrolPrice1L,71,52,48,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Ціна",IDC_STATIC,15,53,16,8
+    GROUPBOX        "",IDC_STATIC,15,79,52,40
+    CONTROL         "Кількість",IDC_PetrolVal,"Button",BS_AUTORADIOBUTTON | WS_GROUP,20,87,46,10
+    CONTROL         "Сума",IDC_PetrolSum,"Button",BS_AUTORADIOBUTTON,19,104,33,10
+    EDITTEXT        IDC_PetrolValEdit,91,82,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PetrolSumEdit,91,100,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PetrolTotal,91,133,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "До сплати",IDC_STATIC,38,137,35,8
+END
+
+IDD_DIALOG3 DIALOGEX 0, 0, 208, 170
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Міні-Кафе"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,151,50,14
+    PUSHBUTTON      "Закрити",IDCANCEL,151,151,50,14
+    CONTROL         "Хот-дог",IDC_HotDogCheck,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,27,36,42,10
+    CONTROL         "Гамбургер",IDC_BurgerCheck,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,27,58,51,10
+    CONTROL         "Картопля-фрі",IDC_PotatoCheck,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,27,80,62,10
+    CONTROL         "Кока-кола",IDC_ColaCheck,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,27,101,50,10
+    EDITTEXT        IDC_HotDogPrice,89,32,40,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_BurgerPrice,89,54,40,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_PotatoPrice,89,76,40,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_ColaPrice,89,97,40,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_HotDogNumberEdit,144,32,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BurherNumberEdit,144,54,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PotatoNumberEdit,144,76,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ColaNumberEdit,144,97,40,14,ES_AUTOHSCROLL
+    LTEXT           "Ціна",IDC_STATIC,89,16,16,8
+    LTEXT           "Кількість",IDC_STATIC,144,16,31,8
+    EDITTEXT        IDC_CafeTotalPrice,109,126,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "До сплати",IDC_STATIC,51,129,35,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 158
+        VERTGUIDE, 15
+        VERTGUIDE, 71
+        VERTGUIDE, 91
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+        HORZGUIDE, 96
+        HORZGUIDE, 114
+    END
+
+    IDD_DIALOG3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 201
+        VERTGUIDE, 27
+        VERTGUIDE, 89
+        VERTGUIDE, 144
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+        HORZGUIDE, 32
+        HORZGUIDE, 54
+        HORZGUIDE, 76
+        HORZGUIDE, 98
+        HORZGUIDE, 119
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG1 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG2 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG3 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // Russian (Russia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Ukrainian (Ukraine) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_UKR)
+LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Ukrainian (Ukraine) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
