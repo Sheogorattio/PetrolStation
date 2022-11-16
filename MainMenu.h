@@ -1,6 +1,7 @@
 #pragma once
 #include"Header.h"
 #include"Cafe.h"
+#include"Petrol.h"
 class MainMenu
 {
 public:

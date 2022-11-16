@@ -129,12 +129,14 @@
   <ItemGroup>
     <ClCompile Include="Cafe.cpp" />
     <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="Petrol.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cafe.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="Petrol.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

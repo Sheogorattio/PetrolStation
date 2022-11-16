@@ -51,19 +51,19 @@ void Cafe::Cls_OnCommand(HWND hwnd, int id, HWND hwndCtrl, UINT codeNotify)
 		TotalPrice = 0;
 		if (BST_CHECKED == SendMessage(hHotDogCh, BM_GETCHECK, 0, 0)) {
 			GetWindowText(hHotDogNum, lpszHowMany, 20);
-			TotalPrice += (HotDogPrice * atoi((char*)lpszHowMany));
+			TotalPrice += (HotDogPrice * _wtoi(lpszHowMany));
 		}
 		if (BST_CHECKED == SendMessage(hBurgerCh, BM_GETCHECK, 0, 0)) {
 			GetWindowText(hBurgerNum, lpszHowMany, 20);
-			TotalPrice += (BurgerPrice * atoi((char*)lpszHowMany));
+			TotalPrice += (BurgerPrice * _wtoi(lpszHowMany));
 		}
 		if (BST_CHECKED == SendMessage(hPotatoCh, BM_GETCHECK, 0, 0)) {
 			GetWindowText(hPotatoNum, lpszHowMany, 20);
-			TotalPrice += (PotatoPrice * atoi((char*)lpszHowMany));
+			TotalPrice += (PotatoPrice * _wtoi(lpszHowMany));
 		}
 		if (BST_CHECKED == SendMessage(hColaCh, BM_GETCHECK, 0, 0)) {
 			GetWindowText(hColaNum, lpszHowMany, 20);
-			TotalPrice += (ColaPrice * atoi((char*)lpszHowMany));
+			TotalPrice += (ColaPrice * _wtoi(lpszHowMany));
 		}
 		TCHAR lpszTotalPrice[20];
 		_stprintf_s(lpszTotalPrice, TEXT("%f"), TotalPrice);

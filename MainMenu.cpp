@@ -14,7 +14,7 @@ BOOL MainMenu::DlgProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 BOOL MainMenu::Cls_OnInit(HWND hwnd, HWND hwndFocus, LPARAM lp)
 {
 	hPetrolButton = GetDlgItem(hwnd, IDC_PetrolButton);
-	hCafeButton = GetDlgItem(hwnd, IDC_CafeButton);
+	hCafeButton = GetDlgItem(hwnd, IDC_CafeButton);	
 	hTotalPrice = GetDlgItem(hwnd, IDC_TotalPrice);
 
 	return FALSE;
@@ -34,6 +34,22 @@ void MainMenu::Cls_OnCommand(HWND hwnd, int id, HWND hwndCtrl, UINT codeNotify)
 			TCHAR lpszTotalPrice[20];
 			_stprintf_s(lpszTotalPrice, TEXT("%f"), nTotalPrice);
 			SetWindowText(hTotalPrice, lpszTotalPrice);
+		}
+		if (id == IDC_PetrolButton) {
+			Petrol petrol;
+			DialogBox(GetModuleHandle(NULL), MAKEINTRESOURCE(IDD_DIALOG2), hwnd, (DLGPROC)Petrol::DlgProc);
+			nTotalPrice += petrol.Total;
+			TCHAR lpszTotalPrice[20];
+			_stprintf_s(lpszTotalPrice, TEXT("%f"), nTotalPrice);
+			SetWindowText(hTotalPrice, lpszTotalPrice);
+		}
+		if (id == IDOK) {
+			TCHAR buff[50];
+			_stprintf_s(buff, TEXT("Total price: %f"), nTotalPrice);
+			MessageBox(hwnd, buff, TEXT("CHEQUE"), MB_OK | MB_ICONINFORMATION);
+		}
+		if(id == IDC_MMenuCancel) {
+			EndDialog(hwnd, 0);
 		}
 }
 
